@@ -9,14 +9,14 @@ const Header = () => {
         <Container>
            
            <div className='text-center'>
-            
                     <img src={logo} alt="" />
                     <p className='text-secondary'> <small>Journalism Without Fear or Favour</small></p>
                      <p>{moment().format('dddd, MMMM D, YYYY')}</p>
+                   
           </div>
              <div className='d-flex'>
                   <Button variant="danger">Latest</Button>
-                  <Marquee speed={100} className='text-danger'>
+                  <Marquee speed={100} direction={"left"} className='text-danger'>
                      I can be a React component, multiple React components, or just some
                       text......            can be a React component, multiple React components, or just some
                 </Marquee>
