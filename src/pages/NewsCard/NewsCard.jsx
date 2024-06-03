@@ -27,11 +27,8 @@ const NewsCard = ({ news }) => {
         <Card.Title>{title}</Card.Title>
         <Card.Text>
           <Card.Img variant="top" src={image_url} />
-          {details.length < 250 ? (
-            <>{details}</>
-          ) : (
-            <>
-              {details.slice(0, 250)}.....
+          {details.length < 250 ? (<>{details}</>) : (
+            <>{details.slice(0, 250)}.....
               <Link to={`/news/${_id}`}>Read More</Link>
             </>
           )}
@@ -42,6 +39,7 @@ const NewsCard = ({ news }) => {
         <div className="flex-grow-1">
           <Rating
               placeholderRating={ rating.number}
+              readonly
               emptySymbol={<FaRegStar></FaRegStar>}
               placeholderSymbol={<FaStar className="text-warning"></FaStar>}
               fullSymbol={<FaStar></FaStar>}
