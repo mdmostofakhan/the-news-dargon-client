@@ -8,7 +8,7 @@ import bg from '../../../assets/bg.png'
 const RightNav = () => {
     return (
         <div>
-            <h2>Login With</h2>
+            <h2 className='mt-4'>Login With</h2>
             <Button className='mb-2' variant="outline-primary"> <FaGoogle /> Login With Google</Button>
             <Button className='mb-4' variant="outline-secondary"> <FaGithub /> Login With Github</Button>
             <div>
@@ -24,7 +24,7 @@ const RightNav = () => {
             className=''
             style={{
                 backgroundImage: `url(${bg})`,
-                height: '600px', 
+                height: '500px', 
                 width: '305px',
                 backgroundSize: 'cover',
                 
