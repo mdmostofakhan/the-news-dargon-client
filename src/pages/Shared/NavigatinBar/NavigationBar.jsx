@@ -5,7 +5,14 @@ import { Link } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
 
 const NavigationBar = () => {
-  const user = useContext(AuthContext);
+  const {user, logOut} = useContext(AuthContext);
+
+  const handleLogOut = () => {
+        logOut()
+        .then()
+        .catch(error => console.log(error))
+  }
+
   return (
     <Container>
       <Navbar collapseOnSelect expand="lg" bg="light" className="light">
@@ -24,7 +31,7 @@ const NavigationBar = () => {
               }
 
               {
-                 user ? <Button variant="secondary">logOut</Button> :
+                 user ? <Button onClick={handleLogOut} variant="secondary">logOut</Button> :
                 <Link to="/login">
                    <Button variant="secondary">login</Button>
                 </Link>
